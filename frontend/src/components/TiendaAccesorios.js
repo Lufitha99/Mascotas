@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 function TiendaAccesorios() {
     const [productos, setProductos] = useState([]);
 
+//aqui hay productos simulados
     useEffect(() => {
         // Simular productos para demostración
         const productosSimulados = Array.from({ length: 10 }, (_, index) => ({
@@ -17,6 +18,19 @@ function TiendaAccesorios() {
         setProductos(productosSimulados);
     }, []);
 
+    //llamado normal a la api
+
+    // useEffect(() => {
+    //     axios.get('http://localhost:8000/api/productos/')
+    //         .then(response => {
+    //             setProductos(response.data);
+    //         })
+    //         .catch(error => {
+    //             console.error('Error al obtener productos:', error);
+    //         });
+    // }, []);
+    
+    
     return (
         <div className="container mt-5">
             <h2 className="mb-4">Tienda de Accesorios</h2>
