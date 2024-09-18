@@ -20,9 +20,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('tienda.urls')),  # Incluye las rutas de la aplicación tienda
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.jwt')),
-    path('api/auth/', include('dj_rest_auth.urls')),  # Rutas de autenticación
-    path('auth/register/', include('dj_rest_auth.registration.urls')),
+    path('auth/', include('djoser.urls')),  # Incluye las rutas de djoser
+    path('auth/', include('djoser.urls.jwt')),  # Rutas JWT de djoser
+    path('api/auth/', include('dj_rest_auth.urls')),  # Rutas de autenticación de dj_rest_auth
+    path('api/auth/registration/', include('dj_rest_auth.registration.urls')),  # Rutas de registro de dj_rest_auth
     path('accounts/', include('allauth.urls')),  # Incluye las URLs de allauth
 ]
